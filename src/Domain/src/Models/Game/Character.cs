@@ -8,7 +8,7 @@ using ShipEntity = Domain.Models.Game.Ship.Ship;
 public abstract class Character
 {
     public Guid Id { get; set; } = Guid.NewGuid();
-    public Guid PartyId { get; set; }
+    public Guid? PartyId { get; set; }
     public Guid? ShipId { get; set; }
     
     public string Name { get; set; } = string.Empty;
@@ -17,7 +17,7 @@ public abstract class Character
     public bool IsAlive { get; set; } = true;
     
     // Navigation properties
-    public Party Party { get; set; } = null!;
+    public Party? Party { get; set; } = null!;
     public ShipEntity? Ship { get; set; }
 }
 

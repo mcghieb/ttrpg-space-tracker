@@ -28,6 +28,7 @@ builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IPasswordHashService, PasswordHashService>();
 builder.Services.AddScoped<LoginUseCase>();
 builder.Services.AddScoped<RegisterUseCase>();
+builder.Services.AddScoped<CreateUserUseCase>();
 
 // Configure JWT Authentication
 builder.Services.AddAuthentication(options =>
